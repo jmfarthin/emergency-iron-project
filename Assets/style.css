@@ -1,3 +1,16 @@
+
+* { 
+    
+ margin: 0;
+
+ box-sizing:border-box;
+ font-size :100%
+
+
+}
+
+
+
 .banner {
 
  font-family: 'Alfa Slab One', cursive;
@@ -6,5 +19,6 @@
 
 .subtitle {
 
-  font-family: fantasy;  
+  font-family: fantasy; 
+  text-siz
 }
