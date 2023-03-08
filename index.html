@@ -35,7 +35,7 @@
     <section class="container is-responsive  is-fullheight " >
         <div class="columns features is-centered">
           <div class="column is-4">
-            <div class="card is-shady">
+            <div class="card is-shady" id="card1">
               <div class="card-image">
                 <figure class="image is-4by3">
                   <img src="Assets/images/rack.jpg"  alt="A photo of a dumbbell rack" class="modal-button" data-target="modal-image2">
@@ -46,34 +46,31 @@
                   <h4 class="has-text-centered">Generate My Workout</h4>
                   <p class="has-text-dark is-size-3 has-text-centered"> Press Plan Workout to continue </p>
                   <div class="buttons is-centered">
-                    <button class="button js-modal-trigger" id="button" data-target="Generate-Workout-Modal">Plan Workout</button>
-                      <div class="modal ce" id="Go-Modal">
-                        <div class="modal-background">
-                          <div class="modal-content">
-                            <div class="card">
-                              <div class="card-content1 py-5 px-5">
-                                <div class="content">
-                                    <h3 class="title mb-6 has-text-centered">Select to get your workout!</h3>
-                                      <div class=" buttons is-centered ">
-                                        <button class="button" id="upper">Upper Body</button>
-                                      </div>
-                                      <div class="buttons is-centered">
-                                        <button class="button" id="'lower">Lower Body</button>
-                                      </div>
-                                      <button class="modal-close is-large"aria-label="close">modal</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                    <button class="button" id="button" data-target="Generate-Workout-Modal">Plan Workout</button>
+              </div>           
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <div class="card" id="Go-Card">
+                        
+            <div class="card-content">
+                <div class="card-content1 py-5 px-5">
+                  <div class="content">
+                      <h3 class="title mb-6 has-text-centered">Select to get your workout!</h3>
+                        <div class=" buttons is-centered ">
+                          <button class="button" id="upper">Upper Body</button>
+                        </div>
+                        <div class="buttons is-centered">
+                          <button class="button" id="lower">Lower Body</button>
+                        </div>
+                        
+                  </div>
+                </div>  
+          </div>
     </section>
-    
+     
 </body>
-<script src="Assets/script.js"></script>
+<script src="Assets/script.js" defer></script>  
 </html>
