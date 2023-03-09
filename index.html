@@ -1,114 +1,80 @@
 <!DOCTYPE html>
-<html >
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Emergency Iron</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="assets/style.css">
-   <script src="https://kit.fontawesome.com/f8c82ada6c.js" crossorigin="anonymous"></script>
-  
+<html>
 
-  </head>
-
- <body>
-    <section class="hero has-background-warning has-text-centered is-responsive ">
-        <div class="hero-body">
-          <p class="title banner is-size-2">
-            THIS. IS. EMERGENCY IRON <i class="fa-solid fa-dumbbell fa-rotate-90"></i>
-          </p>
-          <br>
-          <p class="subtitle is-size-3">
-            Need A Workout ASAP? <em>We Got You</em>
-          </p>
-        </div>
-    </section>
-
-    <br>
-    <br>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Emergency Iron</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="https://kit.fontawesome.com/f8c82ada6c.js" crossorigin="anonymous"></script>
 
 
+</head>
 
-    <section class="container is-responsive is-fullheight " >
-        <div class="columns features">
-          <div class="column is-3">
-            <div class="card is-shady">
+<body>
+  <section class="hero has-background-warning has-text-centered is-responsive ">
+    <div class="hero-body">
+      <p class="title banner is-size-2">
+        THIS. IS. EMERGENCY IRON <i class="fa-solid fa-dumbbell fa-rotate-90"></i>
+      </p>
+      <br>
+      <p class="subtitle is-size-3">
+        Need A Workout ASAP? <em>We Got You</em>
+      </p>
+    </div>
+  </section>
+
+  <br>
+  <br>
+
+
+
+    <section class="container is-responsive  is-fullheight " >
+        <div class="columns features is-centered">
+          <div class="column is-4">
+            <div class="card is-shady" id="card1">
               <div class="card-image">
                 <figure class="image is-4by3">
                   <img src="Assets/images/rack.jpg"  alt="A photo of a dumbbell rack" class="modal-button" data-target="modal-image2">
                 </figure>
               </div>
               <div class="card-content">
-                <div class="content">
-                  <h4>Generate My Workout</h4>
-                  <p>Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec. Integer enim neque volutpat ac tincidunt vitae semper quis. Accumsan tortor posuere ac ut consequat semper viverra nam.</p>
-                  <span class="button is-dark modal-button" data-target="modal-card">Image modal</span>
+                <div class="content is-centered">
+                  <h4 class="has-text-centered">Generate My Workout</h4>
+                  <p class="has-text-dark is-size-3 has-text-centered"> Press Plan Workout to continue </p>
+                  <div class="buttons is-centered">
+                    <button class="button" id="button" data-target="Generate-Workout-Modal">Plan Workout</button>
+              </div>           
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="column is-3">
-            <div class="card is-shady">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="Assets\images\womandumbbell.webp" alt="Photo of a woman performing a dumbbell row">
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="content">
-                  <h4>Demo The Exercise</h4>
-                  <p>Ut venenatis tellus in metus vulputate. Amet consectetur adipiscing elit pellentesque. Sed arcu non odio euismod lacinia at quis risus. Faucibus turpis in eu mi bibendum neque egestas cmonsu songue. Phasellus vestibulum lorem
-                  sed risus.</p>
-                  <span class="button is-dark modal-button" data-target="modal-card">Modal Card</span>
-                </div>
-              </div>
-            </div>
+          <div class="card" id="Go-Card">
+                        
+            <div class="card-content">
+                <div class="card-content1 py-5 px-5">
+                  <div class="content">
+                      <h3 class="title mb-6 has-text-centered">Select to get your workout!</h3>
+                        <div class=" buttons is-centered ">
+                          <button class="button" id="upper">Upper Body</button>
+                        </div>
+                        <div class="buttons is-centered">
+                          <button class="button" id="lower">Lower Body</button>
+                        </div>
+                        
+                  </div>
+                </div>  
           </div>
-          <div class="column is-3 modal-button" data-target="modal-image">
-            <div class="card is-shady">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="Assets\images\Musclebeach.jpg" alt="Photo of a bodybuilder at an outdoor gym">
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="content">
-                  <h4>Find A Gym Near Me</h4>
-                  <p>Imperdiet dui accumsan sit amet nulla facilisi morbi. Fusce ut placerat orci nulla pellentesque dignissim enim. Libero id faucibus nisl tincidunt eget nullam. Commodo viverra maecenas accumsan lacus vel facilisis.ibero id faucibus nisl. </p>
-                  <span class="button is-dark modal-button" data-target="modal-card">Image modal</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-       
-     
     </section>
 
-    <script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1NLcFYrWo6k1mKFD4rYqi4TGBhWGtK0w&callback=initMap">
-  </script>
-    <script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1NLcFYrWo6k1mKFD4rYqi4TGBhWGtK0w&callback=initMap">
-</script>
-
-<script>
-
- const successCallBack = (position) => {
-console.log(position);
- };
-
- const errorCallBack = (error) => {
-console.error(error);
- };
- 
-  navigator.geolocation.getCurrentPosition(successCallBack, errorCallBack);
-</script>
-
+   
 </body>
-</html>
+<script src="Assets/script.js" defer></script>  
 
+
+</html>
