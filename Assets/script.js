@@ -72,3 +72,25 @@ function generateCardEventHandler(event) {
 // event listener for modal with workout buttons
 modal.addEventListener("click", generateCardEventHandler);
 
+
+
+
+
+// If I'm able to get it working I may need to move the maps script back into the index file. Keeping my keys here for now.
+<script async
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1NLcFYrWo6k1mKFD4rYqi4TGBhWGtK0w&callback=initMap">
+</script>
+<script async
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1NLcFYrWo6k1mKFD4rYqi4TGBhWGtK0w&callback=initMap">
+</script>
+
+const successCallBack = (position) => {
+console.log(position);
+};
+
+const errorCallBack = (error) => {
+console.error(error);
+};
+
+navigator.geolocation.getCurrentPosition(successCallBack, errorCallBack);
+</script>
