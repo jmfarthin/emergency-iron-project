@@ -10,6 +10,7 @@ button.onclick = function () {
 
 // variables to be used with the following functions: getExercises, generateCardEventHandler, generateCard event listener
 var exerciseKey = '2qHB8VKEzSKFjKONqevhLw==6887eTADrOBvLuN8'
+var ytKey = 'AIzaSyAUx2V5v1ueDljnSz_13wrwUKrtveFzxfc'
 var upper = ["lats", "biceps", "chest", "triceps", "abdominals"];
 var lower = ["calves", "quadriceps", "hamstrings", "quadriceps", "glutes"];
 var workoutButton = document.querySelector("#generate-workout");
@@ -37,10 +38,6 @@ async function getExercises(group) {
         };
         exerciseGroup.push(newExercise);
     };
-    localStorage.setItem("exercises", JSON.stringify(exerciseGroup));
-    console.log(exerciseGroup);
-};
-
 
 // calls getExercies depending on which button is clicked
 function generateCardEventHandler(event) {
@@ -53,4 +50,77 @@ function generateCardEventHandler(event) {
 
 // event listener for modal with workout buttons
 modal.addEventListener("click", generateCardEventHandler);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+localStorage.setItem("exercises", JSON.stringify(exerciseGroup));
+//console.log(exerciseGroup);
+//function to get embedable youtube video URL via Youtube Data Api
+try { for (var i = 0; i < exerciseGroup.length; i++) {
+    var encoded = await encodeURIComponent(exerciseGroup[i].name);
+    var ytSearch = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&eventType=none&maxResults=1&q=how%20to%20${encoded}&type=video&videoEmbeddable=true&key=${ytKey}`
+    var ytResponse = await fetch(ytSearch);
+    var youtubeApi = await ytResponse.json();
+    var videoId = youtubeApi.items[0].id.videoId;
+    console.log(videoId);
+} 
+    } catch (e) {
+    console.log(e);
+    }
+    
+};
+
+
+
+
+
+
+
+
+
+
 
