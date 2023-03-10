@@ -5,25 +5,25 @@ var PromptCard = document.getElementById('card1')
 var Lower = document.getElementById('lower')
 var Upper = document.getElementById('upper')
 
-function loadIn(){
+function loadIn() {
     HiddenCard.classList.add('is-hidden')
 }
 
-button.onclick = function() {
-    
+button.onclick = function () {
+
     PromptCard.style.display = "none",
-    HiddenCard.classList.remove("is-hidden");
+        HiddenCard.classList.remove("is-hidden");
     HiddenCard.classList.add("is-block");
 }
-loadIn() 
+loadIn()
 
-Upper.addEventListener('click',remove)
-Lower.addEventListener('click',remove)
+Upper.addEventListener('click', remove)
+Lower.addEventListener('click', remove)
 
 function remove() {
-        HiddenCard.classList.remove("is-block");
-        HiddenCard.classList.add("is-hidden")
-    }
+    HiddenCard.classList.remove("is-block");
+    HiddenCard.classList.add("is-hidden")
+}
 
 
 // variables to be used with the following functions: getExercises, generateCardEventHandler, generateCard event listener
@@ -56,6 +56,10 @@ async function getExercises(group) {
         };
         exerciseGroup.push(newExercise);
     };
+    localStorage.setItem("exercises", JSON.stringify(exerciseGroup));
+    console.log(exerciseGroup);
+};
+
 
 // calls getExercies depending on which button is clicked
 function generateCardEventHandler(event) {
@@ -115,22 +119,22 @@ modal.addEventListener("click", generateCardEventHandler);
 
 
 
-localStorage.setItem("exercises", JSON.stringify(exerciseGroup));
-//console.log(exerciseGroup);
+
 //function to get embedable youtube video URL via Youtube Data Api
-try { for (var i = 0; i < exerciseGroup.length; i++) {
-    var encoded = await encodeURIComponent(exerciseGroup[i].name);
-    var ytSearch = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&eventType=none&maxResults=1&q=how%20to%20${encoded}&type=video&videoEmbeddable=true&key=${ytKey}`
-    var ytResponse = await fetch(ytSearch);
-    var youtubeApi = await ytResponse.json();
-    var videoId = youtubeApi.items[0].id.videoId;
-    console.log(videoId);
-} 
-    } catch (e) {
-    console.log(e);
+try {
+    for (var i = 0; i < exerciseGroup.length; i++) {
+        var encoded = await encodeURIComponent(exerciseGroup[i].name);
+        var ytSearch = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&eventType=none&maxResults=1&q=how%20to%20${encoded}&type=video&videoEmbeddable=true&key=${ytKey}`
+        var ytResponse = await fetch(ytSearch);
+        var youtubeApi = await ytResponse.json();
+        var videoId = youtubeApi.items[0].id.videoId;
+        console.log(videoId);
     }
-    
-};
+} catch (e) {
+    console.log(e);
+}
+
+
 
 
 
