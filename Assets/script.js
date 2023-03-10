@@ -53,7 +53,7 @@ async function getExerciseData(group) {
             name: data[ranNum].name,
             muscle: data[ranNum].muscle,
             equipment: data[ranNum].equipment,
-            intructions: data[ranNum].instructions
+            instructions: data[ranNum].instructions
         };
         exerciseGroup.push(newExercise);
     };
@@ -105,15 +105,15 @@ function populateCards() {
         console.log(title);
         title.innerHTML = exercises[i].name;
 
-        // var video = document.querySelector(`#video-${i}`);
-        // video.src = videos[i];
+        var video = document.querySelector(`#video-${i}`);
+        video.src = videos[i];
 
-        var muscle = document.querySelector(`#muscle-${i}`);
-        muscle.innerHTML = `Muscle Targeted: ${exercises[i].muscle}`;
+        // var muscle = document.querySelector(`#muscle-${i}`);
+        // muscle.innerHTML = `Muscle Targeted: ${exercises[i].muscle}`;
 
         var instructions = document.querySelector(`#instructions-${i}`);
         console.log(exercises[i].instructions)
-        instructions.innerHTML = `Intructions: ${exercises[i].instructions}`
+        instructions.innerHTML = `Instructions: ${exercises[i].instructions}`
 
     }
 };
