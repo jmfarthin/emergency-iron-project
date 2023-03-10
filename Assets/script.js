@@ -28,16 +28,17 @@
 
 // variables to be used with the following functions: getExercises, generateCardEventHandler, generateCard event listener
 var exerciseKey = '2qHB8VKEzSKFjKONqevhLw==6887eTADrOBvLuN8'
-var ytKey = 'AIzaSyAUx2V5v1ueDljnSz_13wrwUKrtveFzxfc'
+var ytKey = 'AIzaSyA1NLcFYrWo6k1mKFD4rYqi4TGBhWGtK0w'
 var upper = ["lats", "biceps", "chest", "triceps", "abdominals"];
 var lower = ["calves", "quadriceps", "hamstrings", "quadriceps", "glutes"];
 var workoutButton = document.querySelector("#generate-workout");
 var generateCard = document.querySelector("#generate-card");
 var newExercise = {};
 var muscleGroup;
+var youtubeUrls = [];
 
 // function to get exercise API data
-async function getExercises(group) {
+async function getExerciseData(group) {
     var exerciseGroup = [];
     // for each muscle in the upper or lower array, an API call with be made, saving a random exercise to the exerciseGroup variable
     // which is then stored to localStorage to be used by 'blank' function to render the exercise cards to the page
@@ -58,10 +59,29 @@ async function getExercises(group) {
     };
     localStorage.setItem("exercises", JSON.stringify(exerciseGroup));
     console.log(exerciseGroup);
+
+    //gets embedable youtube video URL via Youtube Data Api
+    // try {
+    //     for (var i = 0; i < exerciseGroup.length; i++) {
+    //         var encoded = await encodeURIComponent(exerciseGroup[i].name);
+    //         var ytSearch = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&eventType=none&maxResults=1&q=how%20to%20${encoded}&type=video&videoEmbeddable=true&key=${ytKey}`
+    //         var ytResponse = await fetch(ytSearch);
+    //         var youtubeApi = await ytResponse.json();
+    //         var videoId = youtubeApi.items[0].id.videoId;
+    //         var newYoutubeUrl = `https://www.youtube.com/embed/${videoId}`
+    //         youtubeUrls.push(newYoutubeUrl);
+    //         console.log(youtubeUrls);
+    //         localStorage.setItem('videos', JSON.stringify(youtubeUrls));
+    //     }
+    // } catch (e) {
+    //     console.log(e);
+    // }
+
+    populateCards();
 };
 
 
-// calls getExercies depending on which button is clicked
+// calls getExercises depending on which button is clicked
 function generateCardEventHandler(event) {
     if (event.target.id === "upper") {
         getExercises(upper);
@@ -69,6 +89,34 @@ function generateCardEventHandler(event) {
         getExercises(lower);
     }
 };
+
+getExerciseData(lower);
+
+function populateCards() {
+    var exercises = JSON.parse(localStorage.getItem('exercises'));
+
+    console.log(exercises);
+    var videos = JSON.parse(localStorage.getItem('videos'));
+
+    for (i = 0; i < 5; i++) {
+        console.log(exercises[i].name);
+        var title = document.querySelector(`#title-${i}`);
+        console.log(title);
+        title.innerHTML = exercises[i].name;
+
+        // var video = document.querySelector(`#video-${i}`);
+        // video.src = videos[i];
+
+        var muscle = document.querySelector(`#muscle-${i}`);
+        muscle.innerHTML = `Muscle Targeted: ${exercises[i].muscle}`;
+
+        var instructions = document.querySelector(`#instructions-${i}`);
+        console.log(exercises[i].instructions)
+        instructions.innerHTML = `Intructions: ${exercises[i].instructions}`
+
+    }
+};
+
 
 
 
@@ -110,18 +158,3 @@ function generateCardEventHandler(event) {
 
 
 
-
-
-// function to get embedable youtube video URL via Youtube Data Api
-try {
-    for (var i = 0; i < exerciseGroup.length; i++) {
-        var encoded = await encodeURIComponent(exerciseGroup[i].name);
-        var ytSearch = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&eventType=none&maxResults=1&q=how%20to%20${encoded}&type=video&videoEmbeddable=true&key=${ytKey}`
-        var ytResponse = await fetch(ytSearch);
-        var youtubeApi = await ytResponse.json();
-        var videoId = youtubeApi.items[0].id.videoId;
-        console.log(videoId);
-    }
-} catch (e) {
-    console.log(e);
-}
