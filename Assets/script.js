@@ -112,7 +112,7 @@ function generateCardEventHandler(event) {
 
 
 
-function to get embedable youtube video URL via Youtube Data Api
+// function to get embedable youtube video URL via Youtube Data Api
 try {
     for (var i = 0; i < exerciseGroup.length; i++) {
         var encoded = await encodeURIComponent(exerciseGroup[i].name);
