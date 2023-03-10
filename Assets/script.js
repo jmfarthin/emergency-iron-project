@@ -5,12 +5,14 @@ var PromptCard = document.getElementById('card1')
 var Lower = document.getElementById('lower')
 var Upper = document.getElementById('upper')
 
+
 function loadIn(){
-    HiddenCard.classList.add('is-hidden')
+    
+    HiddenCard.classList.add('is-hidden');
+    
 }
 
 button.onclick = function() {
-    
     PromptCard.style.display = "none",
     HiddenCard.classList.remove("is-hidden");
     HiddenCard.classList.add("is-block");
