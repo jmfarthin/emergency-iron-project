@@ -70,8 +70,7 @@ function generateCardEventHandler(event) {
     }
 };
 
-// event listener for modal with workout buttons
-modal.addEventListener("click", generateCardEventHandler);
+
 
 
 
@@ -97,3 +96,32 @@ modal.addEventListener("click", generateCardEventHandler);
 
 // navigator.geolocation.getCurrentPosition(successCallBack, errorCallBack);
 // </script>
+// variables for the generate workout card and modal button
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function to get embedable youtube video URL via Youtube Data Api
+try {
+    for (var i = 0; i < exerciseGroup.length; i++) {
+        var encoded = await encodeURIComponent(exerciseGroup[i].name);
+        var ytSearch = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&eventType=none&maxResults=1&q=how%20to%20${encoded}&type=video&videoEmbeddable=true&key=${ytKey}`
+        var ytResponse = await fetch(ytSearch);
+        var youtubeApi = await ytResponse.json();
+        var videoId = youtubeApi.items[0].id.videoId;
+        console.log(videoId);
+    }
+} catch (e) {
+    console.log(e);
+}
