@@ -28,13 +28,14 @@
 
 // variables to be used with the following functions: getExercises, generateCardEventHandler, generateCard event listener
 var exerciseKey = '2qHB8VKEzSKFjKONqevhLw==6887eTADrOBvLuN8'
-var ytKey = 'AIzaSyAUx2V5v1ueDljnSz_13wrwUKrtveFzxfc'
+var ytKey = 'AIzaSyA1NLcFYrWo6k1mKFD4rYqi4TGBhWGtK0w'
 var upper = ["lats", "biceps", "chest", "triceps", "abdominals"];
 var lower = ["calves", "quadriceps", "hamstrings", "quadriceps", "glutes"];
 var workoutButton = document.querySelector("#generate-workout");
 var generateCard = document.querySelector("#generate-card");
 var newExercise = {};
 var muscleGroup;
+var youtubeUrls = [];
 
 // function to get exercise API data
 async function getExerciseData(group) {
@@ -59,7 +60,7 @@ async function getExerciseData(group) {
     localStorage.setItem("exercises", JSON.stringify(exerciseGroup));
     console.log(exerciseGroup);
 
-    //function to get embedable youtube video URL via Youtube Data Api
+    //gets embedable youtube video URL via Youtube Data Api
     // try {
     //     for (var i = 0; i < exerciseGroup.length; i++) {
     //         var encoded = await encodeURIComponent(exerciseGroup[i].name);
@@ -67,16 +68,20 @@ async function getExerciseData(group) {
     //         var ytResponse = await fetch(ytSearch);
     //         var youtubeApi = await ytResponse.json();
     //         var videoId = youtubeApi.items[0].id.videoId;
-    //         var e = "Error, call did not complete."
-    //         console.log(videoId);
+    //         var newYoutubeUrl = `https://www.youtube.com/embed/${videoId}`
+    //         youtubeUrls.push(newYoutubeUrl);
+    //         console.log(youtubeUrls);
+    //         localStorage.setItem('videos', JSON.stringify(youtubeUrls));
     //     }
     // } catch (e) {
     //     console.log(e);
     // }
+
+    populateCards();
 };
 
 
-// calls getExercies depending on which button is clicked
+// calls getExercises depending on which button is clicked
 function generateCardEventHandler(event) {
     if (event.target.id === "upper") {
         getExercises(upper);
@@ -86,6 +91,31 @@ function generateCardEventHandler(event) {
 };
 
 getExerciseData(lower);
+
+function populateCards() {
+    var exercises = JSON.parse(localStorage.getItem('exercises'));
+
+    console.log(exercises);
+    var videos = JSON.parse(localStorage.getItem('videos'));
+
+    for (i = 0; i < 5; i++) {
+        console.log(exercises[i].name);
+        var title = document.querySelector(`#title-${i}`);
+        console.log(title);
+        title.innerHTML = exercises[i].name;
+
+        // var video = document.querySelector(`#video-${i}`);
+        // video.src = videos[i];
+
+        var muscle = document.querySelector(`#muscle-${i}`);
+        muscle.innerHTML = `Muscle Targeted: ${exercises[i].muscle}`;
+
+        var instructions = document.querySelector(`#instructions-${i}`);
+        console.log(exercises[i].instructions)
+        instructions.innerHTML = `Intructions: ${exercises[i].instructions}`
+
+    }
+};
 
 
 
