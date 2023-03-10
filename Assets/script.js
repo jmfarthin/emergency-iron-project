@@ -13,23 +13,32 @@ function loadIn(){
 }
 
 button.onclick = function() {
+
+function loadIn() {
+    HiddenCard.classList.add('is-hidden')
+}
+
+button.onclick = function () {
+
+
     PromptCard.style.display = "none",
-    HiddenCard.classList.remove("is-hidden");
+        HiddenCard.classList.remove("is-hidden");
     HiddenCard.classList.add("is-block");
 }
-loadIn() 
+loadIn()
 
-Upper.addEventListener('click',remove)
-Lower.addEventListener('click',remove)
+Upper.addEventListener('click', remove)
+Lower.addEventListener('click', remove)
 
 function remove() {
-        HiddenCard.classList.remove("is-block");
-        HiddenCard.classList.add("is-hidden")
-    }
+    HiddenCard.classList.remove("is-block");
+    HiddenCard.classList.add("is-hidden")
+}
 
 
 // variables to be used with the following functions: getExercises, generateCardEventHandler, generateCard event listener
 var exerciseKey = '2qHB8VKEzSKFjKONqevhLw==6887eTADrOBvLuN8'
+var ytKey = 'AIzaSyAUx2V5v1ueDljnSz_13wrwUKrtveFzxfc'
 var upper = ["lats", "biceps", "chest", "triceps", "abdominals"];
 var lower = ["calves", "quadriceps", "hamstrings", "quadriceps", "glutes"];
 var workoutButton = document.querySelector("#generate-workout");
@@ -78,6 +87,7 @@ modal.addEventListener("click", generateCardEventHandler);
 
 
 
+
 // If I'm able to get it working I may need to move the maps script back into the index file. Keeping my keys here for now.
 {/* <script async
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1NLcFYrWo6k1mKFD4rYqi4TGBhWGtK0w&callback=initMap">
@@ -96,3 +106,73 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1NLcFYrWo6k1mKFD4rYqi4TG
 
 // navigator.geolocation.getCurrentPosition(successCallBack, errorCallBack);
 // </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//function to get embedable youtube video URL via Youtube Data Api
+try {
+    for (var i = 0; i < exerciseGroup.length; i++) {
+        var encoded = await encodeURIComponent(exerciseGroup[i].name);
+        var ytSearch = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&eventType=none&maxResults=1&q=how%20to%20${encoded}&type=video&videoEmbeddable=true&key=${ytKey}`
+        var ytResponse = await fetch(ytSearch);
+        var youtubeApi = await ytResponse.json();
+        var videoId = youtubeApi.items[0].id.videoId;
+        console.log(videoId);
+    }
+} catch (e) {
+    console.log(e);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
