@@ -81,7 +81,8 @@ async function getExerciseData(group) {
 };
 
 
-// calls getExercises depending on which button is clicked
+// calls getExercise depending on which button is clicked
+
 function generateCardEventHandler(event) {
     if (event.target.id === "upper") {
         getExercises(upper);

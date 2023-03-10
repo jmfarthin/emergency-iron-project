@@ -87,8 +87,11 @@ And a big thanks to our families and loved ones who supported us as we undertook
 
 ### Images for slide show:
 
-- woman kneeling beside man-by Jonathan Borba, Unsplash.com
-- plate on barbell-Victor Freitas, Unsplash.com
+- woman kneeling beside man-by Jonathan Borba, [Unsplash.com](https://unsplash.com/photos)
+- plate on barbell-Victor Freitas, [Unsplash.com](https://unsplash.com/photos)
+- ropes on ground By: Meghan Holmes [Unsplash.com](https://unsplash.com/photos/buWcS7G1_28)
+- active workout picture [Unsplash.com](https://unsplash.com/photos/vOZP2LojrHI)
+
 
 
 ## License
