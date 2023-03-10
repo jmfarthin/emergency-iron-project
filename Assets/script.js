@@ -11,13 +11,13 @@ function loadIn(){
     HiddenCard.classList.add('is-hidden');
     
 }
+loadIn()
 
 button.onclick = function() {
     PromptCard.style.display = "none",
     HiddenCard.classList.remove("is-hidden");
     HiddenCard.classList.add("is-block");
-}
-loadIn() 
+} 
 
 Upper.addEventListener('click',remove)
 Lower.addEventListener('click',remove)
