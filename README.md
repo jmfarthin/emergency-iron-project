@@ -1,8 +1,5 @@
 # Emergency Iron Workout App
 
-
-
-
 ## What Is Emergency Iron? And Why Does It Exist?
 
 This project is motivated by a question familiar to many gymgoers, "What the heck should I be doing right now?"
@@ -88,7 +85,10 @@ https://unsplash.com/
 
 And a big thanks to our families and loved ones who supported us as we undertook this project.
 
+### Images for slide show:
 
+- woman kneeling beside man-by Jonathan Borba, Unsplash.com
+- plate on barbell-Victor Freitas, Unsplash.com
 
 
 ## License
