@@ -37,7 +37,7 @@ var newExercise = {};
 var muscleGroup;
 
 // function to get exercise API data
-async function getExercises(group) {
+async function getExerciseData(group) {
     var exerciseGroup = [];
     // for each muscle in the upper or lower array, an API call with be made, saving a random exercise to the exerciseGroup variable
     // which is then stored to localStorage to be used by 'blank' function to render the exercise cards to the page
@@ -58,6 +58,21 @@ async function getExercises(group) {
     };
     localStorage.setItem("exercises", JSON.stringify(exerciseGroup));
     console.log(exerciseGroup);
+
+    //function to get embedable youtube video URL via Youtube Data Api
+    // try {
+    //     for (var i = 0; i < exerciseGroup.length; i++) {
+    //         var encoded = await encodeURIComponent(exerciseGroup[i].name);
+    //         var ytSearch = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&eventType=none&maxResults=1&q=how%20to%20${encoded}&type=video&videoEmbeddable=true&key=${ytKey}`
+    //         var ytResponse = await fetch(ytSearch);
+    //         var youtubeApi = await ytResponse.json();
+    //         var videoId = youtubeApi.items[0].id.videoId;
+    //         var e = "Error, call did not complete."
+    //         console.log(videoId);
+    //     }
+    // } catch (e) {
+    //     console.log(e);
+    // }
 };
 
 
@@ -69,6 +84,9 @@ function generateCardEventHandler(event) {
         getExercises(lower);
     }
 };
+
+getExerciseData(lower);
+
 
 
 
@@ -111,17 +129,3 @@ function generateCardEventHandler(event) {
 
 
 
-
-function to get embedable youtube video URL via Youtube Data Api
-try {
-    for (var i = 0; i < exerciseGroup.length; i++) {
-        var encoded = await encodeURIComponent(exerciseGroup[i].name);
-        var ytSearch = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&eventType=none&maxResults=1&q=how%20to%20${encoded}&type=video&videoEmbeddable=true&key=${ytKey}`
-        var ytResponse = await fetch(ytSearch);
-        var youtubeApi = await ytResponse.json();
-        var videoId = youtubeApi.items[0].id.videoId;
-        console.log(videoId);
-    }
-} catch (e) {
-    console.log(e);
-}
