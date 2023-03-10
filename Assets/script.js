@@ -1,39 +1,29 @@
 // variables for the generate workout card and modal button
-var button = document.getElementById('button')
-var HiddenCard = document.getElementById('Go-Card')
-var PromptCard = document.getElementById('card1')
-var Lower = document.getElementById('lower')
-var Upper = document.getElementById('upper')
+// var button = document.getElementById('button')
+// var HiddenCard = document.getElementById('Go-Card')
+// var PromptCard = document.getElementById('card1')
+// var Lower = document.getElementById('lower')
+// var Upper = document.getElementById('upper')
 
 
-function loadIn(){
-    
-    HiddenCard.classList.add('is-hidden');
-    
-}
+// function loadIn(){
+//     HiddenCard.classList.add('is-hidden');
+// }
+// loadIn()
 
-button.onclick = function() {
+// button.onclick = function () {
+//     PromptCard.style.display = "none",
+//     HiddenCard.classList.remove("is-hidden");
+//     HiddenCard.classList.add("is-block");
+// }
 
-function loadIn() {
-    HiddenCard.classList.add('is-hidden')
-}
+// Upper.addEventListener('click', remove)
+// Lower.addEventListener('click', remove)
 
-button.onclick = function () {
-
-
-    PromptCard.style.display = "none",
-        HiddenCard.classList.remove("is-hidden");
-    HiddenCard.classList.add("is-block");
-}
-loadIn()
-
-Upper.addEventListener('click', remove)
-Lower.addEventListener('click', remove)
-
-function remove() {
-    HiddenCard.classList.remove("is-block");
-    HiddenCard.classList.add("is-hidden")
-}
+// function remove() {
+//         HiddenCard.classList.remove("is-block");g
+//         HiddenCard.classList.add("is-hidden")
+//     }
 
 
 // variables to be used with the following functions: getExercises, generateCardEventHandler, generateCard event listener
@@ -80,22 +70,22 @@ function generateCardEventHandler(event) {
     }
 };
 
-// event listener for modal with workout buttons
-modal.addEventListener("click", generateCardEventHandler);
 
 
 
 
 
 
-// If I'm able to get it working I may need to move the maps script back into the index file. Keeping my keys here for now.
-{/* <script async
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1NLcFYrWo6k1mKFD4rYqi4TGBhWGtK0w&callback=initMap">
-</script>
-<script async
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1NLcFYrWo6k1mKFD4rYqi4TGBhWGtK0w&callback=initMap">
-</script> */}
 
+
+//If I'm able to get it working I may need to move the maps script back into the index file. Keeping my keys here for now.
+// {* <script async
+// src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1NLcFYrWo6k1mKFD4rYqi4TGBhWGtK0w&callback=initMap">
+// </script>
+// <script async
+// src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1NLcFYrWo6k1mKFD4rYqi4TGBhWGtK0w&callback=initMap">
+// </script> */
+// }
 // const successCallBack = (position) => {
 // console.log(position);
 // };
@@ -106,6 +96,7 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1NLcFYrWo6k1mKFD4rYqi4TG
 
 // navigator.geolocation.getCurrentPosition(successCallBack, errorCallBack);
 // </script>
+// variables for the generate workout card and modal button
 
 
 
@@ -121,36 +112,7 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1NLcFYrWo6k1mKFD4rYqi4TG
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//function to get embedable youtube video URL via Youtube Data Api
+function to get embedable youtube video URL via Youtube Data Api
 try {
     for (var i = 0; i < exerciseGroup.length; i++) {
         var encoded = await encodeURIComponent(exerciseGroup[i].name);
@@ -163,16 +125,3 @@ try {
 } catch (e) {
     console.log(e);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
