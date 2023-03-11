@@ -18,3 +18,25 @@
 
   font-family: fantasy;
 }
+
+.my-menu {
+  /*Sets all the content of dropdown div to center*/
+                  text-align: center; 
+              }
+
+              .dropdown {
+                width: 100%;
+              }
+                .dropdown-trigger {
+                  width: 100%
+                }
+              
+                .button2 {
+                  margin-right: ;
+                  align-items: center;
+                  display: flex;
+                  width: 100%;
+                  justify-content: space-between
+                }
+              
+              
