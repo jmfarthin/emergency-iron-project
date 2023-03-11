@@ -28,7 +28,8 @@
 
 // variables to be used with the following functions: getExercises, generateCardEventHandler, generateCard event listener
 var exerciseKey = '2qHB8VKEzSKFjKONqevhLw==6887eTADrOBvLuN8'
-var ytKey = 'AIzaSyA1NLcFYrWo6k1mKFD4rYqi4TGBhWGtK0w'
+var ytKey = 'AIzaSyAWHwk1CEaivU5yaXOeni7b65XTn6GCYWk'
+var ytKey2 = 'AIzaSyA1NLcFYrWo6k1mKFD4rYqi4TGBhWGtK0w'
 var upper = ["lats", "biceps", "chest", "triceps", "abdominals"];
 var lower = ["calves", "quadriceps", "hamstrings", "quadriceps", "glutes"];
 var workoutButton = document.querySelector("#generate-workout");
@@ -100,19 +101,19 @@ function populateCards() {
     var videos = JSON.parse(localStorage.getItem('videos'));
 
     for (i = 0; i < 5; i++) {
-        console.log(exercises[i].name);
+        // console.log(exercises[i].name);
         var title = document.querySelector(`#title-${i}`);
-        console.log(title);
+        // console.log(title);
         title.innerHTML = exercises[i].name;
 
-        var video = document.querySelector(`#video-${i}`);
-        video.src = videos[i];
+        // var video = document.querySelector(`#video-${i}`);
+        // video.src = videos[i];
 
-        // var muscle = document.querySelector(`#muscle-${i}`);
-        // muscle.innerHTML = `Muscle Targeted: ${exercises[i].muscle}`;
+        var muscle = document.querySelector(`#muscle-${i}`);
+        muscle.innerHTML = `Muscle Targeted: ${exercises[i].muscle}`;
 
         var instructions = document.querySelector(`#instructions-${i}`);
-        console.log(exercises[i].instructions)
+        // console.log(exercises[i].instructions)
         instructions.innerHTML = `Instructions: ${exercises[i].instructions}`
 
     }
