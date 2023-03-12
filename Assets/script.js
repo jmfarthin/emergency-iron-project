@@ -1,29 +1,7 @@
-// variables for the generate workout card and modal button
-// var button = document.getElementById('button')
-// var HiddenCard = document.getElementById('Go-Card')
-// var PromptCard = document.getElementById('card1')
-// var Lower = document.getElementById('lower')
-// var Upper = document.getElementById('upper')
+var selectBox = document.getElementById("card1");
+var Lower = document.getElementById('lower')
+var Upper = document.getElementById('upper')
 
-
-// function loadIn(){
-//     HiddenCard.classList.add('is-hidden');
-// }
-// loadIn()
-
-// button.onclick = function () {
-//     PromptCard.style.display = "none",
-//     HiddenCard.classList.remove("is-hidden");
-//     HiddenCard.classList.add("is-block");
-// }
-
-// Upper.addEventListener('click', remove)
-// Lower.addEventListener('click', remove)
-
-// function remove() {
-//         HiddenCard.classList.remove("is-block");g
-//         HiddenCard.classList.add("is-hidden")
-//     }
 
 
 // variables to be used with the following functions: getExercises, generateCardEventHandler, generateCard event listener
@@ -43,21 +21,24 @@ async function getExerciseData(group) {
     var exerciseGroup = [];
     // for each muscle in the upper or lower array, an API call with be made, saving a random exercise to the exerciseGroup variable
     // which is then stored to localStorage to be used by 'blank' function to render the exercise cards to the page
-    for (muscle of group) {
-        var url = new URL("https://api.api-ninjas.com/v1/exercises");
-        url.searchParams.set("muscle", muscle);
-        var response = await fetch(url, { headers: { "X-API-Key": exerciseKey } });
-        var data = await response.json();
-        let ranNum = Math.floor(Math.random() * 10);
-        // console.log(data[ranNum].name);
-        newExercise = {
-            name: data[ranNum].name,
-            muscle: data[ranNum].muscle,
-            equipment: data[ranNum].equipment,
-            instructions: data[ranNum].instructions
+    try {
+        for (muscle of group) {
+            var url = new URL("https://api.api-ninjas.com/v1/exercises");
+            url.searchParams.set("muscle", muscle);
+            var response = await fetch(url, { headers: { "X-API-Key": exerciseKey } });
+            var data = await response.json();
+            let ranNum = Math.floor(Math.random() * 10);
+            newExercise = {
+                name: data[ranNum].name,
+                muscle: data[ranNum].muscle,
+                equipment: data[ranNum].equipment,
+                instructions: data[ranNum].instructions
+            };
+            exerciseGroup.push(newExercise);
         };
-        exerciseGroup.push(newExercise);
-    };
+    } catch (e) {
+        console.log(e);
+    }
     localStorage.setItem("exercises", JSON.stringify(exerciseGroup));
     console.log(exerciseGroup);
 
@@ -71,98 +52,103 @@ async function getExerciseData(group) {
     //         var videoId = youtubeApi.items[0].id.videoId;
     //         var newYoutubeUrl = `https://www.youtube.com/embed/${videoId}`
     //         youtubeUrls.push(newYoutubeUrl);
-    //         console.log(youtubeUrls);
     //         localStorage.setItem('videos', JSON.stringify(youtubeUrls));
     //     }
     // } catch (e) {
     //     console.log(e);
     // }
 
-    populateCards();
+    generateCards();
 };
 
 
-// calls getExercise depending on which button is clicked
-
+// calls getExerciseData depending on which button is clicked
 function generateCardEventHandler(event) {
     if (event.target.id === "upper") {
-        getExercises(upper);
+        getExerciseData(upper);
+        selectBox.classList.add('is-hidden')
     } else {
-        getExercises(lower);
+        getExerciseData(lower);
+        selectBox.classList.add('is-hidden')
     }
 };
 
-getExerciseData(lower);
+selectBox.addEventListener("click", generateCardEventHandler);
 
-function populateCards() {
+
+
+// takes the data from the APIs and uses it to create cards with exercises, video tutorial, muscle worked, and instructions
+function generateCards() {
     var exercises = JSON.parse(localStorage.getItem('exercises'));
 
     console.log(exercises);
     var videos = JSON.parse(localStorage.getItem('videos'));
 
     for (i = 0; i < 5; i++) {
-        // console.log(exercises[i].name);
-        var title = document.querySelector(`#title-${i}`);
-        // console.log(title);
-        title.innerHTML = exercises[i].name;
-
-        // var video = document.querySelector(`#video-${i}`);
-        // video.src = videos[i];
-
-        var muscle = document.querySelector(`#muscle-${i}`);
-        muscle.innerHTML = `<strong> Muscle Targeted: </strong> ${exercises[i].muscle}`;
-
-        var instructions = document.querySelector(`#instructions-${i}`);
-        console.log(exercises[i].instructions)
-        instructions.innerHTML = `<strong> Instructions: </strong> ${exercises[i].instructions}`
-
-    }
-};
-// Makes the dropdown work on the cards
-var dropdown = document.querySelector('.dropdown');
-dropdown.addEventListener('click', function(event) {
-  event.stopPropagation();
-  dropdown.classList.toggle('is-active');
-});
-
-
-
-for(element of arr){
-    document.querySelector("columns").innerHTML += 
-    <div class="column is-one-half">
+        var muscleName = capFirstLetter(exercises[i].muscle)
+        var exerciseDiv = `<div class="column is-half">
         <div class="card has-background-light " id="exercise-0">
             <card-header class="card-header-title is-centered is-underlined">
-             <p class="is-size-4 has-text-weight-bold" id="title-0">Name of exercise</p>
+                <p class="is-size-4 has-text-weight-bold" id="title-0">${exercises[i].name}</p>
             </card-header>
             <div class="card-content ">
-            <figure class="image is-2by1 is-fullwidth ">
-                <iframe class="has-ratio" id="video-0" src="https://www.youtube.com/embed/YE7VzlLtp-4" frameborder="0"
-                 allowfullscreen></iframe>
-             </figure>
-                    <div>
-                    <p class="mt-2 mb-2 has-text-centered is-size-2" id="muscle-0">Biceps</p>
-                    </div>
-
+                <figure class="image is-2by1 is-fullwidth ">
+                    // <iframe class="has-ratio" id="video-0" src=${videos[i]} frameborder="0"
+                    //     allowfullscreen></iframe>
+                </figure>
+                <div>
+                    <p class="mt-2 mb-2 has-text-centered is-size-2" id="muscle-0"><strong> Muscle Targeted: </strong></p>
+                    <p class="mt-2 mb-2 has-text-centered is-size-2">${muscleName}</p>
+                </div>
                 <div class="dropdown">
                     <div class="dropdown-trigger">
                         <button class="button2 mt-4" aria-haspopup="true" aria-controls="dropdown-menu3">
-                        <h2 class="has-text-centered"> <strong>Instructions</strong></h2>
-                        <span class="icon is-small">
-                        <i class="fas fa-angle-down" aria-hidden="true"></i>
-                        </span>
+                            <h2 class="has-text-centered"> <strong>Instructions:</strong></h2>
+                            <span class="icon is-small">
+                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </span>
                         </button>
                     </div>
-                     <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+                    <div class="dropdown-menu" id="dropdown-menu3" role="menu">
                         <div class="dropdown-content">
-                        <p id="instructions-0">Instructions</p>  
+                            <p>${exercises[i].instructions}</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div> 
-   
-}
+    </div>`
+
+        if (i < 2) {
+            document.querySelector("#exercise-container-0").innerHTML += exerciseDiv;
+        } else if (i >= 2 && i < 4) {
+            document.querySelector("#exercise-container-1").innerHTML += exerciseDiv;
+        } else {
+            document.querySelector("#exercise-container-2").innerHTML += exerciseDiv;
+        }
+
+    };
+    var dropdown = document.getElementsByClassName('dropdown');
+    console.log(dropdown);
+
+    for (el of dropdown) {
+        console.log(el);
+        el.addEventListener("click", dropDownButton);
+    }
+
+};
+
+// Makes the dropdown work on the cards
+function dropDownButton(event) {
+    event.stopPropagation();
+    this.classList.toggle('is-active');
+};
+
+//function to capitilize the first letter of the string included as an argument
+function capFirstLetter(string) {
+    return string[0].toUpperCase() + string.slice(1);
+};
+
 
 
 
