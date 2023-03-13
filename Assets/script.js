@@ -126,42 +126,42 @@ dropdown.addEventListener('click', function(event) {
 
 
 
-for(element of arr){
-    document.querySelector("columns").innerHTML += 
-    <div class="column is-one-half">
-        <div class="card has-background-light " id="exercise-0">
-            <card-header class="card-header-title is-centered is-underlined">
-             <p class="is-size-4 has-text-weight-bold" id="title-0">Name of exercise</p>
-            </card-header>
-            <div class="card-content ">
-            <figure class="image is-2by1 is-fullwidth ">
-                <iframe class="has-ratio" id="video-0" src="https://www.youtube.com/embed/YE7VzlLtp-4" frameborder="0"
-                 allowfullscreen></iframe>
-             </figure>
-                    <div>
-                    <p class="mt-2 mb-2 has-text-centered is-size-2" id="muscle-0">Biceps</p>
-                    </div>
+// for(element of arr){
+//     document.querySelector("exercise-cards").innerHTML += 
+//     <div class="column is-one-half">
+//         <div class="card has-background-light " id="exercise-0">
+//             <card-header class="card-header-title is-centered is-underlined">
+//              <p class="is-size-4 has-text-weight-bold" id="title-0">Name of exercise</p>
+//             </card-header>
+//             <div class="card-content ">
+//             <figure class="image is-2by1 is-fullwidth ">
+//                 <iframe class="has-ratio" id="video-0" src="https://www.youtube.com/embed/YE7VzlLtp-4" frameborder="0"
+//                  allowfullscreen></iframe>
+//              </figure>
+//                     <div>
+//                     <p class="mt-2 mb-2 has-text-centered is-size-2" id="muscle-0">Biceps</p>
+//                     </div>
 
-                <div class="dropdown">
-                    <div class="dropdown-trigger">
-                        <button class="button2 mt-4" aria-haspopup="true" aria-controls="dropdown-menu3">
-                        <h2 class="has-text-centered"> <strong>Instructions</strong></h2>
-                        <span class="icon is-small">
-                        <i class="fas fa-angle-down" aria-hidden="true"></i>
-                        </span>
-                        </button>
-                    </div>
-                     <div class="dropdown-menu" id="dropdown-menu3" role="menu">
-                        <div class="dropdown-content">
-                        <p id="instructions-0">Instructions</p>  
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> 
+//                 <div class="dropdown">
+//                     <div class="dropdown-trigger">
+//                         <button class="button2 mt-4" aria-haspopup="true" aria-controls="dropdown-menu3">
+//                         <h2 class="has-text-centered"> <strong>Instructions</strong></h2>
+//                         <span class="icon is-small">
+//                         <i class="fas fa-angle-down" aria-hidden="true"></i>
+//                         </span>
+//                         </button>
+//                     </div>
+//                      <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+//                         <div class="dropdown-content">
+//                         <p id="instructions-0">Instructions</p>  
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//     </div> 
    
-}
+// }
 
 
 
