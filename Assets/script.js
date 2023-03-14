@@ -44,20 +44,20 @@ async function getExerciseData(group) {
     console.log(exerciseGroup);
 
     //gets embedable youtube video URL via Youtube Data Api
-    // try {
-    //     for (var i = 0; i < exerciseGroup.length; i++) {
-    //         var encoded = await encodeURIComponent(exerciseGroup[i].name);
-    //         var ytSearch = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&eventType=none&maxResults=1&q=how%20to%20${encoded}&type=video&videoEmbeddable=true&key=${ytKey}`
-    //         var ytResponse = await fetch(ytSearch);
-    //         var youtubeApi = await ytResponse.json();
-    //         var videoId = youtubeApi.items[0].id.videoId;
-    //         var newYoutubeUrl = `https://www.youtube.com/embed/${videoId}`
-    //         youtubeUrls.push(newYoutubeUrl);
-    //         localStorage.setItem('videos', JSON.stringify(youtubeUrls));
-    //     }
-    // } catch (e) {
-    //     console.log(e);
-    // }
+    try {
+        for (var i = 0; i < exerciseGroup.length; i++) {
+            var encoded = await encodeURIComponent(exerciseGroup[i].name);
+            var ytSearch = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&eventType=none&maxResults=1&q=how%20to%20${encoded}&type=video&videoEmbeddable=true&key=${ytKey}`
+            var ytResponse = await fetch(ytSearch);
+            var youtubeApi = await ytResponse.json();
+            var videoId = youtubeApi.items[0].id.videoId;
+            var newYoutubeUrl = `https://www.youtube.com/embed/${videoId}`
+            youtubeUrls.push(newYoutubeUrl);
+            localStorage.setItem('videos', JSON.stringify(youtubeUrls));
+        }
+    } catch (e) {
+        console.log(e);
+    }
 
     generateCards();
 };
@@ -95,7 +95,7 @@ function generateCards() {
             </card-header>
             <div class="card-content">
                 <figure class="image is-2by1 is-fullwidth ">
-                    <iframe class="has-ratio" id="video-0" src="https://www.youtube.com/embed/eGo4IYlbE5g" frameborder="0"
+                    <iframe class="has-ratio" id="video-0" src=${videos[i]} frameborder="0"
                        allowfullscreen></iframe>
                 </figure>
                 <div>
@@ -120,8 +120,6 @@ function generateCards() {
             </div>
         </div>
     </div>`
-
-        //${videos[i]}
 
         if (i < 2) {
             document.querySelector("#exercise-container-0").innerHTML += exerciseDiv;

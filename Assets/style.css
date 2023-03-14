@@ -6,17 +6,22 @@
   font-family: 'Alfa Slab One', cursive;
 }
 
-body, html {
+button {
+  font-family: 'Alfa Slab One', cursive;
+}
+
+body,
+html {
   height: 100%;
 }
 
 .bg {
-    background-image: url(images/background.jpg);
-    height: 300%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+  background-image: url(images/background.jpg);
+  height: 300%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 
 .banner {
@@ -44,13 +49,12 @@ body, html {
 }
 
 .button2 {
-  margin-right: ;
   align-items: center;
   display: flex;
   width: 100%;
   justify-content: space-between
 }
+
 .card {
   background-color: rgba(238, 238, 238, 0.6);
 }
-
