@@ -13,24 +13,32 @@ No more staring at rows of equipment to figure out what to do next, and no more 
 
 With just a few clicks you are creating a workout plan, shown how to do it, and can be in-and-out of the gym with minimal idling.
 
-## Insights Gained
-
-During the course of this project we learned that simpler is better when it comes to designing an app for the gym.
-
-It can be crowded and noisy in the gym, and the less time spent fumbling with internet and youtube searches, is more time making sweet, sweet gains.
-
-## Table of Contents
-
 - [Installation](#installation)
+- [Features](#features)
 - [Usage](#usage)
+- [Creators](#creators)
 - [Credits](#credits)
 - [License](#license)
+- [Tests](#tests)
 
 ## Installation
 
 No installation necessary, just navigate to https://jmfarthin.github.io/emergency-iron-project/ and begin.
 Note: The app cannot be guaranteed to work on Internet Explorer. 
 Please upgrade to the latest versions of Chrome,Edge,Safari, etc. to ensure compatibility.
+
+
+
+## Features
+
+The primary feature of Emergency Iron is the Workout Generator. It allows users to pick which part of the upper or lower workout "split" they want to do, and generates a list of five exercises they can do.
+
+The second feature searches youtube for videos of the desired exercises and populates them inside the app. This allows a "one-stop-shop" of finding a workout and then seeing how it is safely and effectively executed. Proper form is critical! (Just because the guy next to you is ripped doesn't mean he's doing his workout the right way!)
+
+
+
+
+
 ## Usage
 
 Provide instructions and examples for use. Include screenshots as needed.
@@ -41,7 +49,7 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
     ![alt text](assets/images/screenshot.png)
     ```
 
-## Credits
+## Creators
 
 Meet The Emergency Iron Team!
 
@@ -91,23 +99,18 @@ And a big thanks to our families and loved ones who supported us as we undertook
 - plate on barbell-Victor Freitas, [Unsplash.com](https://unsplash.com/photos)
 - ropes on ground By: Meghan Holmes [Unsplash.com](https://unsplash.com/photos/buWcS7G1_28)
 - active workout picture [Unsplash.com](https://unsplash.com/photos/vOZP2LojrHI)
-- weight bags one the floor near wall - Adam Wilson [Unsplash.com](https://unsplash.com/photos/gNzqerPFtWs)
+- weight bags one the floor near wall - Adam Wilson [Unsplash.com](https://unsplash.com/photos/gNzqerPFtWs)- stressed out man [Unsplash.com](https://unsplash.com/photos/ufgOEVZuHgM)
+-  stressed out man [Unsplash.com](https://unsplash.com/photos/ufgOEVZuHgM)
+
 
 
 ## License
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
+MIT License copyright: 2023
 
 ---
 
 🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
-
-
-## Features
-
-The primary feature of Emergency Iron is the Workout Generator. It allows users to pick which part of the upper or lower workout "split" they want to do, and generates a list of five exercises they can do.
-
-The second feature searches youtube for videos of the desired exercises and populates them inside the app. This allows a "one-stop-shop" of finding a workout and then seeing how it is safely and effectively executed. Proper form is critical! (Just because the guy next to you is ripped doesn't mean he's doing his workout the right way!)
 
 
 ## Tests
