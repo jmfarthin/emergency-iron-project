@@ -91,12 +91,13 @@ And a big thanks to our families and loved ones who supported us as we undertook
 - plate on barbell-Victor Freitas, [Unsplash.com](https://unsplash.com/photos)
 - ropes on ground By: Meghan Holmes [Unsplash.com](https://unsplash.com/photos/buWcS7G1_28)
 - active workout picture [Unsplash.com](https://unsplash.com/photos/vOZP2LojrHI)
+- stressed out man [Unsplash.com](https://unsplash.com/photos/ufgOEVZuHgM)
 
 
 
 ## License
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
+MIT License @copy 2023
 
 ---
 
