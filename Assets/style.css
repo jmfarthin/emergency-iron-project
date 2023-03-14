@@ -1,12 +1,22 @@
 * {
 
   margin: 0;
-
   box-sizing: border-box;
   font-size: 100%;
   font-family: 'Alfa Slab One', cursive;
 }
 
+body, html {
+  height: 100%;
+}
+
+.bg {
+    background-image: url(images/background.jpg);
+    height: 300%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
 
 .banner {
@@ -40,3 +50,7 @@
   width: 100%;
   justify-content: space-between
 }
+.card {
+  background-color: rgba(238, 238, 238, 0.6);
+}
+

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="bg">
 
 <head>
   <meta charset="utf-8">
@@ -9,20 +9,21 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="Assets/style.css">
   <script src="https://kit.fontawesome.com/f8c82ada6c.js" crossorigin="anonymous"></script>
 
 
 </head>
 
 <body>
-  <section class="hero has-background-warning has-text-centered is-responsive ">
+
+  <section class="hero is-small has-background-grey-dark has-text-centered is-responsive">
     <div class="hero-body">
-      <p class="title banner is-size-2">
+      <p class="title banner is-size-2 has-text-warning-light">
         THIS. IS. EMERGENCY IRON <i class="fa-solid fa-dumbbell fa-rotate-90"></i>
       </p>
       <br>
-      <p class="subtitle is-size-3">
+      <p class="subtitle is-size-3 has-text-black-bis">
         Need A Workout ASAP? <em>We Got You</em>
       </p>
     </div>
@@ -30,29 +31,22 @@
 
   <br>
   <br>
-
   <section class="container is-responsive  is-fullheight is-fullwidth ">
     <div class="columns features is-centered">
       <div class="column is-4">
-        <div class="card is-shady" id="card1">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="Assets/images/rack.jpg" alt="A photo of a dumbbell rack" class="modal-button"
-                data-target="modal-image2">
-            </figure>
-          </div>
+        <div class="card mgt-large card1" id="card1">
           <div class="card-content">
             <div class="content is-centered">
               <p class="has-text-dark is-size-3 has-text-centered"> Pick your workout:</p>
               <div class="buttons is-centered">
-                <button class="button" id="upper">Upper Body</button>
-                <button class="button" id="lower">Lower Body</button>
+                <button class="button is-rounded is-dark " id="upper">Upper Body</button>
+                <button class="button is-rounded is-dark " id="lower">Lower Body</button>
               </div>
             </div>
           </div>
         </div>
         <div class="is-centered buttons is-hidden" id="goBackDiv">
-          <button class="button" id="goBack">Go Back</button>
+          <button class="button is-ghost has-text-light is-size-4" id="goBack">Get New Workout</button>
         </div>
       </div>
     </div>

@@ -89,18 +89,18 @@ function generateCards() {
     for (i = 0; i < 5; i++) {
         var muscleName = capFirstLetter(exercises[i].muscle)
         var exerciseDiv = `<div class="column is-half">
-        <div class="card has-background-light " id="exercise-0">
-            <card-header class="card-header-title is-centered is-underlined">
+        <div class="card " id="exercise-0">
+            <card-header class="card-header-title is-centered is-underlined ">
                 <p class="is-size-4 has-text-weight-bold" id="title-0">${exercises[i].name}</p>
             </card-header>
-            <div class="card-content ">
+            <div class="card-content">
                 <figure class="image is-2by1 is-fullwidth ">
                     <iframe class="has-ratio" id="video-0" src="https://www.youtube.com/embed/eGo4IYlbE5g" frameborder="0"
                        allowfullscreen></iframe>
                 </figure>
                 <div>
-                    <p class="mt-2 mb-2 has-text-centered is-size-2" id="muscle-0"><strong> Muscle Targeted: </strong></p>
-                    <p class="mt-2 mb-2 has-text-centered is-size-2">${muscleName}</p>
+                    <p class="mt-2 mb-2 has-text-centered is-size-5" id="muscle-0"><strong> Muscle Targeted: </strong></p>
+                    <p class="mt-2 mb-2 has-text-centered is-size-5">${muscleName}</p>
                 </div>
                 <div class="dropdown">
                     <div class="dropdown-trigger">
