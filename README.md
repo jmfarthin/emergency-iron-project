@@ -33,7 +33,11 @@ Please upgrade to the latest versions of Chrome,Edge,Safari, etc. to ensure comp
 
 The primary feature of Emergency Iron is the Workout Generator. It allows users to pick which part of the upper or lower workout "split" they want to do, and generates a list of five exercises they can do.
 
-The second feature searches youtube for videos of the desired exercises and populates them inside the app. This allows a "one-stop-shop" of finding a workout and then seeing how it is safely and effectively executed. Proper form is critical! (Just because the guy next to you is ripped doesn't mean he's doing his workout the right way!)
+The second feature searches youtube for videos of the desired exercises and populates them inside the app. This allows a "one-stop-shop" of finding a workout and then seeing how it is safely and effectively executed. A text description of how to perform each exercise is also provided. 
+
+Proper form is critical! (Just because the guy next to you is ripped doesn't mean he's doing his workout in a safe manner!)
+
+
 
 
 
@@ -41,13 +45,34 @@ The second feature searches youtube for videos of the desired exercises and popu
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+1. Choose A Workout Split by Click On Either Lower Body or Upper Body
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+<br>
+
+
+![jmfarthin github io_emergency-iron-project_](https://user-images.githubusercontent.com/122495055/224873280-2c73c06f-4598-44da-b029-231aaedb8d3b.png)
+
+<br>
+
+2. Once Loaded, Click On a Video's Play Button To Watch A Demonstration
+
+<br>
+
+![jmfarthin github io_emergency-iron-project_ (1)](https://user-images.githubusercontent.com/122495055/224874014-24863a5a-0d29-463e-b4ca-1b47acf0888a.png)
+
+<br>
+
+3. Click On the Dropdown "Instructions" Tab To Read A Description Of Each Exercise
+
+<br>
+
+![jmfarthin github io_emergency-iron-project_ (2)](https://user-images.githubusercontent.com/122495055/224875560-ee9b238c-7a70-40df-b816-8be4a9868df4.png)
+
+<br>
+<br>
+
+4. Enjoy Your Workout!
 
 ## Creators
 
@@ -100,7 +125,7 @@ And a big thanks to our families and loved ones who supported us as we undertook
 - plate on barbell-Victor Freitas, [Unsplash.com](https://unsplash.com/photos)
 - ropes on ground By: Meghan Holmes [Unsplash.com](https://unsplash.com/photos/buWcS7G1_28)
 - active workout picture [Unsplash.com](https://unsplash.com/photos/vOZP2LojrHI)
-- weight bags one the floor near wall - Adam Wilson [Unsplash.com](https://unsplash.com/photos/gNzqerPFtWs)- stressed out man [Unsplash.com](https://unsplash.com/photos/ufgOEVZuHgM)
+- weight bags one the floor near wall - Adam Wilson [Unsplash.com](https://unsplash.com/photos/gNzqerPFtWs)
 -  stressed out man [Unsplash.com](https://unsplash.com/photos/ufgOEVZuHgM)
 
 
