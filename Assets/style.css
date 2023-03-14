@@ -1,7 +1,6 @@
 * {
 
   margin: 0;
-
   box-sizing: border-box;
   font-size: 100%;
   font-family: 'Alfa Slab One', cursive;
@@ -14,7 +13,6 @@ body, html {
 .bg {
     background-image: url(images/background.jpg);
     height: 300%;
-    
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
