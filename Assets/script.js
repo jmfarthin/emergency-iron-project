@@ -4,7 +4,7 @@ var Upper = document.getElementById('upper')
 
 
 
-// variables to be used with the following functions: getExercises, generateCardEventHandler, generateCard event listener
+// variables to be used with the following functions: getExerciseData, generateCardEventHandler, generateCard event listener
 var exerciseKey = '2qHB8VKEzSKFjKONqevhLw==6887eTADrOBvLuN8'
 var ytKey = 'AIzaSyAWHwk1CEaivU5yaXOeni7b65XTn6GCYWk'
 var ytKey2 = 'AIzaSyA1NLcFYrWo6k1mKFD4rYqi4TGBhWGtK0w'
@@ -15,6 +15,7 @@ var generateCard = document.querySelector("#generate-card");
 var newExercise = {};
 var muscleGroup;
 var youtubeUrls = [];
+var goBackDiv = document.getElementById("goBackDiv");
 
 // function to get exercise API data
 async function getExerciseData(group) {
@@ -71,6 +72,7 @@ function generateCardEventHandler(event) {
         getExerciseData(lower);
         selectBox.classList.add('is-hidden')
     }
+    goBackDiv.classList.remove('is-hidden');
 };
 
 selectBox.addEventListener("click", generateCardEventHandler);
@@ -93,8 +95,8 @@ function generateCards() {
             </card-header>
             <div class="card-content">
                 <figure class="image is-2by1 is-fullwidth ">
-                    <iframe class="has-ratio" id="video-0" src=${"https://www.youtube.com/embed/eGo4IYlbE5g"} frameborder="0"
-                        allowfullscreen></iframe>
+                    <iframe class="has-ratio" id="video-0" src="https://www.youtube.com/embed/eGo4IYlbE5g" frameborder="0"
+                       allowfullscreen></iframe>
                 </figure>
                 <div>
                     <p class="mt-2 mb-2 has-text-centered is-size-5" id="muscle-0"><strong> Muscle Targeted: </strong></p>
@@ -118,6 +120,8 @@ function generateCards() {
             </div>
         </div>
     </div>`
+
+        //${videos[i]}
 
         if (i < 2) {
             document.querySelector("#exercise-container-0").innerHTML += exerciseDiv;
@@ -149,9 +153,12 @@ function capFirstLetter(string) {
     return string[0].toUpperCase() + string.slice(1);
 };
 
+//adds functionality to go back button
 
 
-
+document.getElementById("goBack").addEventListener("click", function () {
+    location.reload();
+});
 
 
 
