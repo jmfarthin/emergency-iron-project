@@ -87,6 +87,7 @@ And a big thanks to our families and loved ones who supported us as we undertook
 
 ### Images for slide show:
 
+- military press-by John Arano, [Unsplash.com](https://unsplash.com/photos)
 - woman kneeling beside man-by Jonathan Borba, [Unsplash.com](https://unsplash.com/photos)
 - plate on barbell-Victor Freitas, [Unsplash.com](https://unsplash.com/photos)
 - ropes on ground By: Meghan Holmes [Unsplash.com](https://unsplash.com/photos/buWcS7G1_28)
@@ -96,11 +97,7 @@ And a big thanks to our families and loved ones who supported us as we undertook
 
 ## License
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
-
----
-
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
+MIT license
 
 
 ## Features
