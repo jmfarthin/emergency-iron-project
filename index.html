@@ -9,20 +9,21 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="Assets/style.css">
   <script src="https://kit.fontawesome.com/f8c82ada6c.js" crossorigin="anonymous"></script>
 
 
 </head>
 
-<body>
-  <section class="hero has-background-warning has-text-centered is-responsive ">
+<body class="bg">
+
+  <section class="hero is-small has-background-grey-dark has-text-centered is-responsive">
     <div class="hero-body">
-      <p class="title banner is-size-2">
+      <p class="title banner is-size-2 has-text-warning-light">
         THIS. IS. EMERGENCY IRON <i class="fa-solid fa-dumbbell fa-rotate-90"></i>
       </p>
       <br>
-      <p class="subtitle is-size-3">
+      <p class="subtitle is-size-3 has-text-black-bis">
         Need A Workout ASAP? <em>We Got You</em>
       </p>
     </div>
@@ -30,150 +31,26 @@
 
   <br>
   <br>
-
-
-
+  
   <section class="container is-responsive  is-fullheight is-fullwidth ">
     <div class="columns features is-centered">
       <div class="column is-4">
-        <div class="card is-shady" id="card1">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="Assets/images/rack.jpg" alt="A photo of a dumbbell rack" class="modal-button"
-                data-target="modal-image2">
-            </figure>
-          </div>
+        <div class="card mgt-large card1" id="card1">
           <div class="card-content">
             <div class="content is-centered">
               <p class="has-text-dark is-size-3 has-text-centered"> Pick your workout:</p>
               <div class="buttons is-centered">
-                <button class="button" id="upper">Upper Body</button>
-                <button class="button" id="lower">Lower Body</button>
+                <button class="button is-rounded is-dark " id="upper">Upper Body</button>
+                <button class="button is-rounded is-dark " id="lower">Lower Body</button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- <div class="card" id="Go-Card">
-
-
-      <div class="card-content">
-        <div class="card-content1 py-5 px-5">
-          <div class="content">
-            <h3 class="title mb-6 has-text-centered">Select to get your workout!</h3>
-            <div class=" buttons is-centered ">
-              
-            </div>
-            <div class="buttons is-centered">
-              
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div> -->
     <div class="columns" id="exercise-container-0"></div>
     <div class="columns" id="exercise-container-1"></div>
     <div class="columns" id="exercise-container-2"></div>
-    <!-- <div class="column is-one-half">
-        <div class="card has-background-light " id="exercise-0">
-          <card-header class="card-header-title is-centered is-underlined">
-            <p class="is-size-4 has-text-weight-bold" id="title-0">Name of exercise</p>
-          </card-header>
-          <div class="card-content ">
-            <figure class="image is-2by1 is-fullwidth ">
-              <iframe class="has-ratio" id="video-0" src="https://www.youtube.com/embed/YE7VzlLtp-4" frameborder="0"
-                allowfullscreen></iframe>
-            </figure>
-            <div>
-              <p class="mt-2 mb-2 has-text-centered is-size-2" id="muscle-0">Biceps</p>
-            </div>
-            <div> -->
-    <!-- <p id="instructions-0">Instructions</p> -->
-    <!-- </div>
-            <div class="dropdown">
-              <div class="dropdown-trigger">
-                <button class="button mt-4" aria-haspopup="true" aria-controls="dropdown-menu3">
-                  <h2 class="has-text-centered"> <strong>Instructions</strong></h2>
-                  <span class="icon is-small">
-                    <i class="fas fa-angle-down" aria-hidden="true"></i>
-                  </span>
-                </button>
-              </div>
-              <div class="dropdown-menu" id="dropdown-menu3" role="menu">
-                <div class="dropdown-content">
-                  <p id="instructions-0">Instructions</p>  
-                </div>
-              </div>
-            </div>
-          </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="column is-one-half">
-        <div class="card " id="exercise-1">
-          <card-header class="card-header-title">
-            <p class="has-text-centered" id="title-1">Name of exercise</p>
-          </card-header>
-          <div class="card-content">
-            <figure class="image is-4by3 is-fullwidth">
-              <iframe class="has-ratio" id="video-1" src="https://www.youtube.com/embed/YE7VzlLtp-4" frameborder="0"
-                allowfullscreen></iframe>
-            </figure>
-            <p id="muscle-1">Biceps</p>
-            <p id="instructions-1">Instructions</p>
-          </div>
-        </div>
-      </div>
-      <div class="column is-one-fifth">
-        <div class="card " id="exercise-2">
-          <card-header class="card-header-title">
-            <p class="has-text-centered" id="title-2">Name of exercise</p>
-          </card-header>
-          <div class="card-content">
-            <figure class="image is-4by3 is-fullwidth">
-              <iframe class="has-ratio" id="video-2" src="https://www.youtube.com/embed/YE7VzlLtp-4" frameborder="0"
-                allowfullscreen></iframe>
-            </figure>
-            <p id="muscle-2">Biceps</p>
-            <p id="instructions-2">Instructions</p>
-          </div>
-        </div>
-      </div>
-      <div class="column is-one-fifth">
-        <div class="card " id="exercise-3">
-          <card-header class="card-header-title">
-            <p class="has-text-centered" id="title-3">Name of exercise</p>
-          </card-header>
-          <div class="card-content">
-            <figure class="image is-4by3 is-fullwidth">
-              <iframe class="has-ratio" id="video-3" src="https://www.youtube.com/embed/YE7VzlLtp-4" frameborder="0"
-                allowfullscreen></iframe>
-            </figure>
-            <p id="muscle-3">Biceps</p>
-            <p id="instructions-3">Instructions</p>
-          </div>
-        </div>
-      </div>
-      <div class="column is-one-fifth">
-        <div class="card " id="exercise-4">
-          <card-header class="card-header-title">
-            <p class="has-text-centered" id="title-4">Name of exercise</p>
-          </card-header>
-          <div class="card-content">
-            <figure class="image is-4by3 is-fullwidth">
-              <iframe class="has-ratio" id="video-4" src="https://www.youtube.com/embed/YE7VzlLtp-4" frameborder="0"
-                allowfullscreen></iframe>
-            </figure>
-            <p id="muscle-4">Biceps</p>
-            <p id="instructions-4">Instructions</p>
-          </div>
-        </div> -->
-
   </section>
 
 </body>
